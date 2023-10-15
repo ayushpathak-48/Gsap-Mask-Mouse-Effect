@@ -1,0 +1,68 @@
+:root {
+  --bg: #11131e;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+.bg {
+  background-color: var(--bg);
+}
+
+p {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.content p {
+  background: -webkit-linear-gradient(45deg, #fa9b8b 0%, #f27481 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hidden-content {
+  --x: 0px;
+  --y: 0px;
+  --size: 5px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgb(251, 156, 132);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(251, 156, 132, 1) 0%,
+    rgba(240, 102, 128, 1) 50%,
+    rgba(129, 36, 112, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(251, 156, 132, 1) 0%,
+    rgba(240, 102, 128, 1) 50%,
+    rgba(129, 36, 112, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(251, 156, 132, 1) 0%,
+    rgba(240, 102, 128, 1) 50%,
+    rgba(129, 36, 112, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fb9c84",endColorstr="#812470",GradientType=1);
+  color: var(--bg);
+  --mask: radial-gradient(
+    circle at var(--x) var(--y),
+    black var(--size),
+    transparent 0
+  );
+  -webkit-mask-image: var(--mask);
+  mask-image: var(--mask);
+  pointer-events: none;
+  visibility: hidden;
+}
